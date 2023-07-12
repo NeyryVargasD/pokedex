@@ -14,8 +14,19 @@ body {
   justify-content: center;
   margin: 0;
 }
-
+.pokedex-h {
+  background-color: rgb(42, 50, 75);
+  width: 100%;
+  height: 5vh;
+  padding: 1vh 1vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 0 5vh;
+}
 h1 {
+  grid-column: 2 / 3;
+  
+  color: white;
   letter-spacing: 3px;
 }
 
