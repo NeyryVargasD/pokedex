@@ -7,46 +7,111 @@ body {
   color:black ;
   margin: auto;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: center;
+
 }
 
+
+
+
+
+
+header.pokedex-h {
+  background-color: rgb(42, 50, 75);
+  width: 100%;
+  height: 6vh;
+  padding: 1vh 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.pokemon_header_title{
+  color: rgb(201, 195, 195);
+  margin: 7px 17px;
+  float: right;
+
+}
+form{
+  display: flex;
+  margin: auto;
+}
+
+.pokedex-h form input{
+  height: 3vh;
+  padding: 5px;
+  border:none;
+  border-radius: 0.5vw;
+  margin: 10px 5px;
+  
+}
+.pokedex-h form button {
+width: 3vw;
+height: 3vh;
+background: crimson;
+outline: none;
+border: none;
+background: transparent;
+cursor: pointer;
+margin-left: 10px;
+}
+.pokedex-h form button img {
+  width: 3vw;
+  height: auto;
+
+}
 #pokedex{
   
     display: grid;
-    grid-template-columns: repeat(6, 13vw);
+    grid-template-columns: repeat(6, 14vw);
     grid-template-rows: minmax(vw, auto)repeat(25, 60vw);
-    align-items: center;
+    grid-gap: 25px;
+    justify-content: center;
     
-
-    
-  
-  
 }
 
-.pokedex-h {
-  background-color: rgb(42, 50, 75);
-  width: 100%;
-  height: 5vh;
-  padding: 1vh 1vw;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0 0 5vh;
-}
-h1 {
-  grid-column: 2 / 3;
-  color: white;
-  letter-spacing: 3px;
-}
 
-.poke-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: space-between;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  
-}
+
 .card {
   list-style: none;
+  padding: 3.13vw;
   background-color: burlywood;
+  color: #222;
+  border-radius: 0.78vw;
+  box-shadow: 0 0 1.17vw #949494;
+  text-align: center;
+}
+
+.card:hover{
+  background:linear-gradient(60deg, rgb(42, 50, 75), transparent) ;
+}
+
+.card-img{
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  
+
+}
+.h2{
+  background-color: black;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) and (min-width:300px) {
+  body{
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+  }
+  
+  #pokedex{
+  
+    display: grid;
+    grid-template-columns: repeat(2, 30vw);
+    grid-template-rows: minmax(vw, auto)repeat(75, 60vw);
+    grid-gap: 40px;
+    justify-content: center;
+    
+}
 }

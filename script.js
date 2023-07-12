@@ -30,7 +30,7 @@ Promise.all(promesas).then(resultados =>{
 	const pokemons = resultados.map((result) =>  ({
 		name :result.name,
 		id : result.id,
-		img : result.sprites["front_defoult"],
+		img : result.sprites.front_default,
 		type : result.types.map(type => type.type.name)
 
 	}));
