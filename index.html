@@ -7,15 +7,18 @@
     <title>Pokedex</title>
   </head>
   <body>
-    <div class="poke-container" id="poke-container">
-      <header class="pokedex-h">
-        <form method="post">
-          <input type="text">
-          <button></button>
-        </form>
+    <header class="pokedex-h">
+      <div class="pokemon_header_title">
         <h1>Pokedex</h1>
-      </header>
-      <section class="input-select"></section>
+      </div>
+      <form method="post">
+        <input type="text">
+        <button>
+          <img src="https://i.ibb.co/n3KpVd2/pokeball.png" alt="">
+        </button>
+      </form>
+    </header>
+    <section class="poke-container" id="poke-container"></section>
       <!-- Bulbasaur es un pokemon prueba se deben borrar y traer la info de la API -->
 
       <div class="pokemon" style="background-color: rgb(222,253,224);">
@@ -73,7 +76,7 @@
         </div>
       </div>
      
-    </div>
+    </section>
     <!-- Design inspired by this Dribbble shot: https://dribbble.com/shots/5611109--Pokemon -->
     <script src="script.js"></script>
   </body>

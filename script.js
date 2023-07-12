@@ -32,8 +32,124 @@ const getPokemon = async (id) => {
     createPokemonCard(data)
 }
 
+function createPokemonCard(pokemon){
+	const pokemonEl = document.createElement('div');
+	pokemon.classList.add('pokemon');
+	const poke_types = pokemon.types.map(ty)
+}
 const createPokemonCard = (pokemon) => {
     
 }
 
 fetchPokemons()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+drawPokemon()
+
+
+/*Buscar pokemon*/
+
+pokeForm.addEventListener('submit', e =>{
+    e.preventDefault();
+    let searchPokemon = document.getElementById('pokemon').value;
+    getPokemon(searchPokemon, true);
+})
+
+function exitModal(){
+   const modalPokemon = document.getElementById('modalPokemon');
+   modalPokemon.style.display ='none'
+   drawPokemon()
+}
