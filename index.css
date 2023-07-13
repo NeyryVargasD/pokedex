@@ -105,55 +105,33 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 900px) and (min-width:300px) {
-  body{
-    background: linear-gradient(to right, #d4d3dd, #efefbb);
-  }
   header.pokedex-h {
-    background-color: rgb(42, 50, 75);
     width: 100%;
     height: auto;
     padding: 1vh 1vw;
     display: flex;
     flex-direction: column;
-    margin: 0 0 5vh;
+    margin: 0 0 3vh;
     align-items: center;
   }  
-  .pokemon_header_title{
-    color: rgb(201, 195, 195);
-    margin: 7px 17px;
-  }
   form{
     display: flex;
     margin: auto;
-  }
-  
-  .pokedex-h form input{
-    height: 3vh;
-    padding: 5px;
-    border:none;
-    border-radius: 0.5vw;
-    margin: 10px 5px;
-    
-  }
+  }  
   .pokedex-h form div {
-  width: 3vw;
-  height: 3vh;
-  background: crimson;
-  outline: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  
+  width: 4vw;
+  height: 4vh;
   }
   .pokedex-h form div img {
-    align-content: flex-end;
     width: 14vw;
     height: auto;
   }
   #pokedex{
     display: flex;
     flex-direction: column;
-    justify-content: center;   
+    justify-items: center;
+    align-content: space-between;
+  }
 
    .card-img{
     width: 160px;
