@@ -1,23 +1,6 @@
 const pokedex = document.getElementById('pokedex');
 
 const promesas =[];
-const colors = {
-    fire: '#FFA05D',
-	grass: '#8FD594',
-	electric: '#FFE43B',
-	water: '#7E97C0',
-	ground: '#CAAC4D',
-	rock: '#90642D',
-	poison: '#9D5B9B',
-	bug: '#EAFD71',
-	dragon: '#97b3e6',
-	psychic: '#FF96B5',
-	flying: '#CDCDCD',
-	fighting: '#FF5D5D',
-	normal: '#FFFFFF'
-}
-
-const main_types = Object.keys(colors)
 
 for(let i=1; i<=150; i++){
 	const url =`https://pokeapi.co/api/v2/pokemon/${i}`
@@ -37,22 +20,34 @@ Promise.all(promesas).then(resultados =>{
 
 	showPokemon(pokemons);
 });
+let colors = {
+	fire: '#FFA05D',
+	grass: '#8FD594',
+	electric: '#FFE43B',
+	water: '#7E97C0',
+	ground: '#CAAC4D',
+	rock: '#90642D',
+	poison: '#9D5B9B',
+	bug: '#EAFD71',
+	dragon: '#97b3e6',
+	psychic: '#FF96B5',
+	flying: '#CDCDCD',
+	fighting: '#FF5D5D',
+	normal: '#FFFFFF'
+  };
 
 const showPokemon = pokemon =>{
 	const pokemonHTML=
 	pokemon.map((poke)=>
-	 `<li class="card" id>
+	 `<li class="card" id="card" style="background-color: ${colors[poke.type]}">
 		<img class="card-img" src="${poke.img}"/>
 		<h2 class="card-subtitle">name: ${poke.name}</h2>
-		<p class=" card-text">type:${poke.type}</p>
+		<p class=" card-text">type: ${poke.type}</p>
 	 </li>`
 	).join('');
 	
 	pokedex.innerHTML = pokemonHTML;
 }
-
-
-
 
 document.addEventListener("keyup", e=>{
 
