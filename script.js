@@ -31,148 +31,41 @@ Promise.all(promesas).then(resultados =>{
 		name :result.name,
 		id : result.id,
 		img : result.sprites.front_default,
-		type : result.types.map(type => type.type.name)
-
+		type : result.types.map(type => type.type.name),
 	}));
+
 
 	showPokemon(pokemons);
 });
 
 const showPokemon = pokemon =>{
-	console.log(pokemon);
 	const pokemonHTML=
 	pokemon.map((poke)=>
-	 `<li class="card">
+	 `<li class="card" id>
 		<img class="card-img" src="${poke.img}"/>
-		<h2 class="card-subtitle">${poke.name}</h2>
-		<p class=" card-text">${poke.type}</p>
+		<h2 class="card-subtitle">name: ${poke.name}</h2>
+		<p class=" card-text">type:${poke.type}</p>
 	 </li>`
 	).join('');
 	
 	pokedex.innerHTML = pokemonHTML;
 }
 
-getPokemon();
 
-pokeForm.addEventListener('submit', e =>{
-    e.preventDefault();
-    let searchPokemon = document.getElementById('pokemon').value;
-    getPokemon(searchPokemon, true);
-})
 
-function exitModal(){
-   const modalPokemon = document.getElementById('modalPokemon');
-   modalPokemon.style.display ='none'
-   drawPokemon()
-}
 
+document.addEventListener("keyup", e=>{
 
+	if (e.target.matches("#search")){
+  
+		if (e.key ==="Escape")e.target.value = ""
+  
+		document.querySelectorAll(".card").forEach(pokemo =>{
+  
+			pokemo.textContent.toLowerCase().includes(e.target.value.toLowerCase()) 
+			  ?pokemo.classList.remove("filtro")
+			  :pokemo.classList.add("filtro")
+		})
+	}
+  })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-drawPokemon()
-
-
-/*Buscar pokemon*/
-
-pokeForm.addEventListener('submit', e =>{
-    e.preventDefault();
-    let searchPokemon = document.getElementById('pokemon').value;
-    getPokemon(searchPokemon, true);
-})
-
-function exitModal(){
-   const modalPokemon = document.getElementById('modalPokemon');
-   modalPokemon.style.display ='none'
-   drawPokemon()
-}

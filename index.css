@@ -11,12 +11,7 @@ body {
 
 }
 
-
-
-
-
-
-headerheader.pokedex-h {
+header.pokedex-h {
   background-color: rgb(42, 50, 75);
   width: 100%;
   height: 6vh;
@@ -25,12 +20,7 @@ headerheader.pokedex-h {
   grid-template-columns: repeat(2, 1fr);
   margin: 0 0 5vh;
 }
-h1 {
-  grid-column: 2 / 3;
-  
-  color: white;
-  letter-spacing: 3px;
-}
+
 
 .poke-container {
   display: flex;
@@ -57,7 +47,7 @@ form{
   margin: 10px 5px;
   
 }
-.pokedex-h form button {
+.pokedex-h form div {
 width: 3vw;
 height: 3vh;
 background: crimson;
@@ -65,12 +55,11 @@ outline: none;
 border: none;
 background: transparent;
 cursor: pointer;
-margin-left: 10px;
+
 }
-.pokedex-h form button img {
+.pokedex-h form div img {
   width: 3vw;
   height: auto;
-
 }
 #pokedex{
   
@@ -110,6 +99,9 @@ margin-left: 10px;
 .h2{
   background-color: black;
   text-align: center;
+}
+.filtro{
+  display: none;
 }
 
 @media screen and (max-width: 900px) and (min-width:300px) {
