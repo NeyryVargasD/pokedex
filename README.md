@@ -11,3 +11,5 @@
 1. Luego, se crea un arreglo llamado promesas para almacenar las promesas resultantes de las solicitudes a la PokéAPI. Luego, se realiza una solicitud fetch() para cada URL y se agrega la promesa resultante al arreglo promesas.
 1. Después de eso, se utiliza Promise.all() para esperar a que todas las promesas se resuelvan.
 1. Finalmente, se llama a la función showPokemon() y se le pasa el arreglo pokemons. Esta función toma los datos de cada Pokémon y genera una cadena de HTML para mostrarlos en el elemento pokedex del documento HTML. Cada Pokémon se muestra en una tarjeta con su imagen, nombre y tipos.
+## Despliegue
+-https://neyryvargasd.github.io/pokedex/
